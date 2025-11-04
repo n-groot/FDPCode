@@ -1,0 +1,25 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+    canvas.before:
+        Color:
+            rgba: 0.2, 0.6, 0.8, 1  # Light blue
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    Label:
+        id: label
+        text: "Select an app to analyze its APK"
+        size_hint_y: None
+        height: 40
+        font_size: 25
+        halign: 'center'
+
+    ScrollView:
+        BoxLayout:
+            id: app_list
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
